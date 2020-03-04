@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
+import { Route, Switch } from 'react-router-dom';
+
+import Registration from './components/Registration.js';
+import PrivateRoute from './components/PrivateRoute.js';
+// import Login from './components/Login.js';
+import Dashboard from './components/Dashboard.js';
+// import Navigation from './components/Navigation.js';
+
+import axiosWithAuth from './utils/axiosWithAuth';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+      <div className="App">
+        {/* <Navigation/> */}
+          <Switch>
+            <Route exact path="/" component={Registration}/>
+            {/* <Route path="/login" component={Login} /> */}
+            <PrivateRoute path="/dashboard" component={Dashboard} /> 
+          </Switch>
+      </div>
+  );
+}     
+  
 export default App;
