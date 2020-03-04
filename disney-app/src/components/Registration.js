@@ -63,7 +63,7 @@ class Registration extends React.Component {
                         name = 'username'
                         value = {this.state.credentials.username || ''}
                         onChange = {this.handleChange}
-                        placeholder = '* username'
+                        placeholder = '* email'
                         />
 
                         <br></br>
