@@ -1,8 +1,6 @@
 import React from 'react'
 import  {useForm}  from 'react-hook-form'
 
-
-
 import "./styles.css";
 
 function Logon() {
@@ -12,9 +10,6 @@ function Logon() {
     };
   
     return (
-
-
-
         // Choose Account Type:Start
         <div>
             <h1>Choose Account Type</h1>
@@ -51,10 +46,6 @@ function Logon() {
       <button type="submit">Sign Up</button>
       </form>
       {/* Form End */}
-      
-    
-      
-     
         </div>
     
 
