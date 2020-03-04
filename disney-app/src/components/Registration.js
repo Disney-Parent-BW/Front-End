@@ -17,7 +17,7 @@ class Registration extends React.Component {
     
     state = {
         credentials: {
-            username: '',
+            email: '',
             password: ''
         }
     }; 
@@ -38,10 +38,10 @@ class Registration extends React.Component {
             .then(response => {
                 console.log('kd:registration:login:axios:then', response.data)
                 localStorage.setItem('token', response.data.token);
-                localStorage.setItem('username', response.data.created_user.username); 
+                localStorage.setItem('email', response.data.created_user.email); 
                 this.props.history.push('/dashboard');
                 this.setState ({ credentials: {
-                    username: '',
+                    email: '',
                     password: ''
                 }});
             })
@@ -60,8 +60,8 @@ class Registration extends React.Component {
                     
                     <Input
                         type = 'text'
-                        name = 'username'
-                        value = {this.state.credentials.username || ''}
+                        name = 'email'
+                        value = {this.state.credentials.email || ''}
                         onChange = {this.handleChange}
                         placeholder = '* email'
                         />
