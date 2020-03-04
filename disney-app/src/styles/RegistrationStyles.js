@@ -7,8 +7,9 @@ const Wrapper = styled.div`
     vertical-align: middle;
     align-items: center;
     margin: 0 auto;
-    margin-top: 250px;
+    margin-top: 100px;
     border-radius: 15px;
+
 
     @media only screen and (max-width: 1024px) {
         width: 95%;
@@ -16,6 +17,7 @@ const Wrapper = styled.div`
 `;
 
 const Form = styled.form`
+
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -24,6 +26,7 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
+
     width: 80%;
     padding: 4px;
     margin: 10px;
@@ -41,7 +44,6 @@ const Button = styled.button`
     border: 2px solid #e3e2e0;
 
     margin: 10px;
-    height: 35px;
     display: flex;
     align-items: baseline;
     background-color: #454245;
@@ -50,10 +52,16 @@ const Button = styled.button`
         background: #a5c3c6;
     }
 `;
+const Header = styled.h1`
+    font-weight: bold;
+    border: none;
+`
+
 
 const Container = styled.div`
-    background-color: magenta;
-    // width:30%;
+    font-weight: bold;
+    background-color: #454245;
+    border-radius: 15px;
     border:.5px solid black;
 `
 
@@ -73,6 +81,7 @@ export {
     Button,
     Container,
     SubTitle,
-    NavLink
+    NavLink,
+    Header
 
 }

@@ -8,7 +8,8 @@ import {
     Button, 
     Container,
     SubTitle,
-    NavLink
+    NavLink,
+    Header
     } from '../styles/RegistrationStyles'; 
 
 
@@ -55,7 +56,8 @@ class Registration extends React.Component {
             
             <Wrapper>
                 <Form onSubmit = {this.login}>
-                    <h1>Sign up for the Disney Parent App! </h1>
+                    <Header><h1 >Disney Parent App </h1></Header>
+                    
                     <Input
                         type = 'text'
                         name = 'username'
