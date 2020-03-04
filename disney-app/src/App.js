@@ -5,14 +5,16 @@ import Registration from './components/Registration.js';
 import PrivateRoute from './components/PrivateRoute.js';
 import Dashboard from './components/Dashboard.js';
 
-// import axiosWithAuth from './utils/axiosWithAuth';
+import axiosWithAuth from './utils/axiosWithAuth';
+import Logon from './Logon';
 
 import './App.css';
 
 function App() {
   return (
-
       <div className="App">
+        {/* <Navigation/> */}
+        <Logon/>
           <Switch>
             <Route exact path="/" component={Registration}/>
             <PrivateRoute path="/dashboard" component={Dashboard} /> 
