@@ -5,7 +5,7 @@ import axios from "axios";
 
 import AliceCarousel from 'react-alice-carousel';
 
-export default function saltFeed() {
+export default function userFeed() {
   const [feed, setFeed] = useState([]);
 useEffect(() => {
   
