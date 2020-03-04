@@ -1,7 +1,8 @@
 import React from 'react'
 import  {useForm}  from 'react-hook-form'
-
+import { Link} from 'react-router-dom';
 import "./styles.css";
+
 
 function Logon() {
     const { register, errors, handleSubmit } = useForm();
@@ -43,7 +44,9 @@ function Logon() {
         )}
         <input type="submit" />
         <p>No Account?</p>
-      <button type="submit">Sign Up</button>
+        <Link to='/'>
+      <button type="submit" >Sign Up</button>
+      </Link>
       </form>
       {/* Form End */}
         </div>
