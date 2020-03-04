@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "react": "^16.13.0",
+    "react-alice-carousel": "^1.17.3",
     "react-dom": "^16.13.0",
     "react-hook-form": "^4.10.1",
     "react-router-dom": "^5.1.2",

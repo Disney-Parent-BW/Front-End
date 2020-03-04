@@ -34,13 +34,13 @@ const Card = (props) => {
   return (
       <CardDesign>
           <div className='carousel-card'>
-            <h2>{props.name}</h2>
-            <h3>User: {props.pass}</h3>
-            <p3>Pass cost: {props.cost}</p3>
+            
+            <h3>User: {props.Name}</h3>
+            <h3>Pass Type: {props.pass}</h3>
+            <h3>Pass cost: {props.cost}</h3>
             <ButtonBox>
             <button className = 'save-user-btn'
                     onClick = {() => handleSave()}>Save User</button>
-
             <button>Contact User</button>
             </ButtonBox>
             
