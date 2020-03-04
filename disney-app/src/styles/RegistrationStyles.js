@@ -52,9 +52,11 @@ const Button = styled.button`
         background: #a5c3c6;
     }
 `;
+
 const Header = styled.h1`
     font-weight: bold;
     border: none;
+    font-size: 3rem;
 `
 
 
