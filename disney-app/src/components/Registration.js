@@ -79,7 +79,7 @@ class Registration extends React.Component {
                     </Button>
                     <hr></hr>
                     <Container>
-                        <SubTitle>Already registered? Click <Link to='/login'><NavLink>here</NavLink></Link> to login</SubTitle>
+                        <SubTitle>Already registered? Click <Link to='/logon'><NavLink>here</NavLink></Link> to login</SubTitle>
                     </Container>
                 </Form>
             </Wrapper>

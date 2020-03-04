@@ -1,10 +1,10 @@
 import React from 'react'
 import  {useForm}  from 'react-hook-form'
 
-import "./styles.css";
+// import "./styles.css";
 
 function Logon() {
-    const { register, errors, getValues, handleSubmit } = useForm();
+    const { register, errors, handleSubmit } = useForm();
     const onSubmit = data => {
       alert(JSON.stringify(data));
     };

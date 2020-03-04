@@ -14,9 +14,10 @@ function App() {
   return (
       <div className="App">
         {/* <Navigation/> */}
-        <Logon/>
+        {/* <Logon/> */}
           <Switch>
             <Route exact path="/" component={Registration}/>
+            <Route path= "/Logon" component={Logon}/>
             <PrivateRoute path="/dashboard" component={Dashboard} /> 
           </Switch>
       </div>
