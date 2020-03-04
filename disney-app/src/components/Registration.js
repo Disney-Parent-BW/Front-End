@@ -60,6 +60,25 @@ class Registration extends React.Component {
                     
                     <Input
                         type = 'text'
+                        name = 'name'
+                        value = {this.state.credentials.name || ''}
+                        onChange = {this.handleChange}
+                        placeholder = '* name'
+                        />
+                        <br></br>
+
+                    <Input
+                        type = 'text'
+                        name = 'account'
+                        value = {this.state.credentials.account || ''}
+                        onChange = {this.handleChange}
+                        placeholder = '* account type'
+                        />
+
+                        <br></br>
+
+                    <Input
+                        type = 'text'
                         name = 'email'
                         value = {this.state.credentials.email || ''}
                         onChange = {this.handleChange}
@@ -67,7 +86,7 @@ class Registration extends React.Component {
                         />
 
                         <br></br>
-                        
+
                     <Input
                         type = 'password'
                         name = 'password'
@@ -81,7 +100,7 @@ class Registration extends React.Component {
                         type = 'submit'
                         >Register
                     </Button>
-                    <hr></hr>
+
                     <Container>
                         <SubTitle>Already registered? Click <Link to='/logon'><NavLink>here</NavLink></Link> to login</SubTitle>
                     </Container>

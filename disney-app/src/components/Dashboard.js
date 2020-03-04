@@ -1,14 +1,19 @@
 import React, {useState} from 'react';
 // import userFeed from './userFeed';
 import Card from './Card';
+import UpdateUsername from './UpdateUsername';
 
 const Dashboard = () => {
-    const [currentUser] = useState(localStorage.getItem('email'));
-
+    const [currentUser, setCurrentUser] = useState(localStorage.getItem('name'));
+    const [userAccount] = useState(localStorage.getItem('account'));
     return (
         <>
         <div className = "dashboard-header">
-                <h1>Welcome to the Disney Parent App, {currentUser}.</h1>
+                <h2>Welcome to the Disney Parent App, {currentUser}.</h2>
+                <h2>Account type: {userAccount}</h2>
+                <div className = "update-section">
+                <UpdateUsername setCurrentUser={setCurrentUser} /> 
+                </div>
             </div>
             <Card/>
             {/* <userFeed/> */}
