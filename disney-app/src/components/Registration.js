@@ -52,8 +52,10 @@ class Registration extends React.Component {
     render() {
         
         return (
+            
             <Wrapper>
                 <Form onSubmit = {this.login}>
+                    <h1>Sign up for the Disney Parent App! </h1>
                     <Input
                         type = 'text'
                         name = 'username'

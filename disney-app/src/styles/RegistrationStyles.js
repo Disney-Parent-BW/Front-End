@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    background: #a49989;
+    background: lightblue;
     display: flex;
-    width: 40%;
+    justify-content: center;
+    vertical-align: middle;
     align-items: center;
     margin: 0 auto;
+    margin-top: 250px;
+    border-radius: 15px;
 
     @media only screen and (max-width: 1024px) {
         width: 95%;
@@ -49,8 +52,8 @@ const Button = styled.button`
 `;
 
 const Container = styled.div`
-    background-color: lightblue;
-    width:30%;
+    background-color: magenta;
+    // width:30%;
     border:.5px solid black;
 `
 
