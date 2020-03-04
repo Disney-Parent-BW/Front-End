@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const Dashboard = () => {
-    const [currentUser] = useState(localStorage.getItem('username'));
+    const [currentUser] = useState(localStorage.getItem('email'));
 
     return (
         <>
