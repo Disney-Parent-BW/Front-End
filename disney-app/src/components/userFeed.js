@@ -5,12 +5,11 @@ import axios from "axios";
 
 import AliceCarousel from 'react-alice-carousel';
 
-export default function userFeed() {
+export default function saltFeed() {
   const [feed, setFeed] = useState([]);
 useEffect(() => {
   
-axios
-   .get('')
+    axios.get('')
    .then((response) => {
     const sliced = response.data.slice(0,10) // grabs only the first 10 results from the response
     return sliced;

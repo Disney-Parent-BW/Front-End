@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-// import userFeed from './userFeed';
+// import saltFeed from './userFeed';
 import Card from './Card';
 
 const Dashboard = () => {
@@ -8,9 +8,10 @@ const Dashboard = () => {
     return (
         <>
         <div className = "dashboard-header">
-                <h1>Welcome to the app, {currentUser}.</h1>
+                <h1>Welcome to the Disney Parent App, {currentUser}.</h1>
             </div>
             <Card/>
+            {/* <saltFeed/> */}
         </>
     )
 }

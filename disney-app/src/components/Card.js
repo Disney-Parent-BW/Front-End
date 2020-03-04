@@ -10,6 +10,8 @@ const CardDesign = styled.div`
 text-decoration: none;
 background: white;
 border-radius: 15px;
+padding: 20px;
+text-align: left;
 `
 
 const Card = (props) => {
