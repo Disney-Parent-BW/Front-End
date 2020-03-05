@@ -12,7 +12,7 @@ function Logon() {
   
     return (
         // Choose Account Type:Start
-        <div>
+        <div className="loginContainer">
             <h1>Choose Account Type</h1>
             <div>
             <h2>Parents</h2>

@@ -56,7 +56,7 @@ class Registration extends React.Component {
             
             <Wrapper>
                 <Form onSubmit = {this.login}>
-                    <Header><h3>Disney Parent App </h3></Header>
+                    <Header><h3>Disney Parent Registration </h3></Header>
                     
                     <Input
                         type = 'text'

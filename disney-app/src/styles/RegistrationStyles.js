@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    background: #0e101c;
+    background: white;
     display: flex;
     justify-content: center;
     vertical-align: middle;
@@ -27,7 +27,7 @@ const Input = styled.input`
     margin: 10px;
     border: none;
     border-bottom: 3px solid #a5c3c6;
-    color: #454245;
+    color: #235789;
     font-size: 1.2rem;
     text-align: center;
 `;
@@ -41,7 +41,7 @@ const Button = styled.button`
     margin: 10px;
     display: flex;
     align-items: baseline;
-    background-color: #454245;
+    background-color: #235789;
     
     &:hover{
         background: #a5c3c6;
@@ -52,16 +52,21 @@ const Header = styled.h1`
     font-weight: bold;
     border: none;
     font-size: 3rem;
-    color: #ec5990;
+    color: #235789;
 `
 
 
 const Container = styled.div`
     font-weight: bold;
-    background-color: #0e101c;
+    // color: white;
+    background-color: #235789;
     border-radius: 15px;
     border:.5px solid black;
-
+    padding: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 const SubTitle = styled.p`
@@ -69,9 +74,8 @@ const SubTitle = styled.p`
     font-size: 1.5rem;
 `;
  const NavLink = styled.span`
-    color: #ec5990;
+    color: orange;
     `;
-
 
 export {
     Wrapper,

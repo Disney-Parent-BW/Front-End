@@ -4,8 +4,8 @@ import Card from './Card';
 import UpdateUsername from './UpdateUsername';
 
 const Dashboard = () => {
-    const [currentUser, setCurrentUser] = useState(localStorage.getItem('name'));
-    const [userAccount] = useState(localStorage.getItem('account'));
+    const [currentUser, setCurrentUser] = useState(localStorage.getItem('username'));
+    const [userAccount] = useState(localStorage.getItem('accountType'));
     return (
         <>
         <div className = "dashboard-header">
