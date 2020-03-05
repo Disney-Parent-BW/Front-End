@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import styled from "styled-components";
 // import SaltFeed from './SaltFeed';
@@ -6,10 +6,7 @@ import styled from "styled-components";
 import List from './List';
 import UserSearch from './UserSearch.js';
 import Dashboard from './Dashboard';
-// import HamburgerMenu from './HamburgerMenu.js';
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const WrapperDiv = styled.div `
     font-weight: bold;
