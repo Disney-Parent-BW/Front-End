@@ -19,8 +19,8 @@ const Card = (props) => {
   const handleSave = () => {
     let userInfo = {
       disney_username: props.name,
-      accounr_type: props.account,
-      cost: props.cost
+      account_type: props.account,
+      // cost: props.cost
     }
 
     axiosWithAuth()
