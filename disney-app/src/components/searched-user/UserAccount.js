@@ -3,7 +3,7 @@ import { SearchContext } from '../../contexts/SearchContext.js';
 
 import Account from './Account.js';
 
-import { Button, Card, Grid } from 'semantic-ui-react';
+import {Grid } from 'semantic-ui-react';
 
 const UserComments = () => {
     const { account, user } = useContext(SearchContext);

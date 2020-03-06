@@ -23,10 +23,6 @@ const Container = styled.div`
 
 `
 
-const Button = styled.button`
-
-`;
-
 const Navigation = () => {
 
   return (

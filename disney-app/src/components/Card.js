@@ -20,7 +20,6 @@ const Card = (props) => {
     let userInfo = {
       disney_username: props.name,
       account_type: props.account,
-      // cost: props.cost
     }
 
     axiosWithAuth()
@@ -39,13 +38,10 @@ const Card = (props) => {
             
             <h3>User: {props.Name}</h3>
             <h3>Account Type: {props.account}</h3>
-            {/* <h3>Pass Type: {props.pass}</h3> */}
-            {/* <h3>Pass cost: {props.cost}</h3> */}
             <ButtonBox>
             <button className = 'save-user-btn'
                     onClick = {() => handleSave()}>Save User</button>
             <button>Contact User</button>
-            {/* <button>Buy Pass</button> */}
             </ButtonBox>
             
           </div>

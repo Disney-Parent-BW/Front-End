@@ -60,8 +60,8 @@ class Registration extends React.Component {
                     
                     <Input
                         type = 'text'
-                        name = 'name'
-                        value = {this.state.credentials.name || ''}
+                        name = 'userName'
+                        value = {this.state.credentials.userName || ''}
                         onChange = {this.handleChange}
                         placeholder = '* name'
                         />
@@ -69,8 +69,8 @@ class Registration extends React.Component {
 
                     <Input
                         type = 'text'
-                        name = 'account'
-                        value = {this.state.credentials.account || ''}
+                        name = 'accountType'
+                        value = {this.state.credentials.accountType || ''}
                         onChange = {this.handleChange}
                         placeholder = '* account type'
                         />
