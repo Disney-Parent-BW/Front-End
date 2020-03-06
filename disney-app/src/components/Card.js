@@ -24,7 +24,7 @@ const Card = (props) => {
     }
 
     axiosWithAuth()
-    .post(`https://disneyparent-backend.herokuapp.com`, userInfo)
+    .post(`https://disney-parent-api.herokuapp.com/`, userInfo)
     .then(response => {
         console.log(response)
     })

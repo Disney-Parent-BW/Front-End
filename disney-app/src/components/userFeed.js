@@ -9,7 +9,7 @@ export default function userFeed() {
   const [feed, setFeed] = useState([]);
 useEffect(() => {
   
-    axios.get('https://disneyparent-backend.herokuapp.com')
+    axios.get('https://disney-parent-api.herokuapp.com/')
    .then((response) => {
     const sliced = response.data.slice(0,10) // grabs only the first 10 results from the response
     return sliced;
