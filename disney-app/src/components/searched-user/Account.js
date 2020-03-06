@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Card, Image } from 'semantic-ui-react';
+import { Card,} from 'semantic-ui-react';
 
 const Comment = props => {
 
@@ -8,11 +8,6 @@ const Comment = props => {
         return (
             <Card>
                 <Card.Content>
-                    <Image
-                        size='tiny'
-                        floated='right'
-                        src=''
-                        />
                     <Card.Header>{props.user.name.toUpperCase()}</Card.Header>
                     <Card.Description>
                         {props.account.text}

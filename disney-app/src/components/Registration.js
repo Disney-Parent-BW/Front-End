@@ -34,9 +34,9 @@ class Registration extends React.Component {
     login = event => {
         event.preventDefault();
         axiosWithAuth()
-            .post('/register', this.state.credentials)
+            .post('/api/auth/register', this.state.credentials)
             .then(response => {
-                console.log('kd:registration:login:axios:then', response.data)
+                console.log(response.data)
                 localStorage.setItem('token', response.data.token);
                 localStorage.setItem('email', response.data.created_user.email); 
                 this.props.history.push('/dashboard');
@@ -45,7 +45,7 @@ class Registration extends React.Component {
                     password: ''
                 }});
             })
-                .catch (error => console.log ('kd:registration:login:axios.catch', error));
+                .catch (error => console.log (error));
     };
 
     
@@ -55,7 +55,7 @@ class Registration extends React.Component {
         return (
             
             <Wrapper>
-                <Form onSubmit = {this.login}>
+                <Form onSubmit = {this.logon}>
                     <Header><h3>Disney Parent Registration </h3></Header>
                     
                     <Input
@@ -69,8 +69,8 @@ class Registration extends React.Component {
 
                     <Input
                         type = 'text'
-                        name = 'accountType'
-                        value = {this.state.credentials.accountType || ''}
+                        name = 'role'
+                        value = {this.state.credentials.role || ''}
                         onChange = {this.handleChange}
                         placeholder = '* account type'
                         />
@@ -103,7 +103,7 @@ class Registration extends React.Component {
 
                     <Container>
                         <SubTitle>Already registered? Click <Link to='/logon'><NavLink>here</NavLink></Link> to login</SubTitle>
-                    </Container>
+                    </Container>    
                 </Form>
             </Wrapper>
         );

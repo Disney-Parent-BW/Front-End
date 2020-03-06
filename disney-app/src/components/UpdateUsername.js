@@ -21,7 +21,7 @@ function UpdateUsername(props) {
     const handleSubmit = event => {
         event.preventDefault();
         axiosWithAuth()
-            .put(`/usersname`, user)
+            .put(`/username`, user)
             .then (response => {
                 props.setCurrentUser(response.data.username);
                 setUser(initialUser)

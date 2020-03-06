@@ -6,13 +6,13 @@ import UpdateUsername from './UpdateUsername';
 
 const Dashboard = () => {
     const [currentUser, setCurrentUser] = useState(localStorage.getItem('username'));
-    const [userAccount] = useState(localStorage.getItem('accountType'));
+    const [userRole] = useState(localStorage.getItem('role'));
     return (
         <>
         <Navigation/>
         <div className = "dashboard-header">
                 <h2>Welcome to the Disney Parent App, {currentUser}.</h2>
-                <h2>Account type: {userAccount}</h2>
+                <h2>Account type: {userRole}</h2>
                 <div className = "update-section">
                 <UpdateUsername setCurrentUser={setCurrentUser} /> 
                 </div>
