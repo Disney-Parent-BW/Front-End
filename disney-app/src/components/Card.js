@@ -18,12 +18,12 @@ const Card = (props) => {
   
   const handleSave = () => {
     let userInfo = {
-      disney_username: props.username,
-      account_type: props.role,
+      username: props.username,
+      role: props.role,
     }
 
     axiosWithAuth()
-    .post(`https://disney-parent-api.herokuapp.com/api/users`, userInfo)
+    .post(`https://disney-parent-api.herokuapp.com/api/users/`, userInfo)
     .then(response => {
         console.log(response)
     })

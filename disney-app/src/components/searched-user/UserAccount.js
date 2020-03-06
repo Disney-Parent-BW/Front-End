@@ -11,7 +11,7 @@ const UserComments = () => {
     if(account.length > 0) {
         return (
             <Grid relaxed columns={4}>
-                { account.map(account => {
+                {account.map(account => {
             return (
                 <Grid.Column>
                     <Account user={user} account={account} />

@@ -6,6 +6,7 @@ import styled from "styled-components";
 import List from './List';
 import UserSearch from './UserSearch.js';
 import Dashboard from './Dashboard';
+import PrivateRoute from './PrivateRoute';
 
 
 const WrapperDiv = styled.div `
@@ -34,13 +35,12 @@ const Navigation = () => {
     </WrapperDiv>
 
 
-
-      <Container>
-            <Route path ='/characters' component = {List} />
-            <Route exact path ='/'component = {Dashboard}/>
+{/* 
+      <Container> */}
+            {/* <PrivateRoute path="/dashboard" component={Dashboard} /> */}
             {/* <Route path="/logon" exact component={Logon} /> */}
             <Route path="/search" exact component={UserSearch} />
-      </Container>
+      {/* </Container> */}
           </>
    
   )};

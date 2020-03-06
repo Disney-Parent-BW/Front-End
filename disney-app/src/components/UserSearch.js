@@ -16,7 +16,7 @@ const Container = styled.div`
 
 const UserSearch = () => {
 
-    return (
+    return (<>
         <SearchContextProvider>
             <Container>
                 <SearchForm />
@@ -24,7 +24,7 @@ const UserSearch = () => {
                 <UserAccount />
             </Container>
         </SearchContextProvider>
-    )
+    </>);
 }
 
 export default UserSearch;

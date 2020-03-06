@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axiosWithAuth from '../utils/axiosWithAuth';
-import {withRouter, Link} from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+
 import {
     Wrapper, 
     Form, 
@@ -13,87 +15,111 @@ import {
     } from '../styles/RegistrationStyles'; 
 
 
-class Registration extends React.Component {
-    
-    state = {
-        credentials: {
-            email: '',
-            password: ''
-        }
-    }; 
+const Registration = props => {
+    const [userRegistration, setUserRegistration] = useState({});
+    const { register, handleSubmit, errors } = useForm();
 
-    handleChange = event => {    
-        this.setState ({
-            credentials: {
-                ...this.state.credentials,
-                [event.target.name]: event.target.value
-            }
-        });
-    };
+    // state = {
+    //     credentials: {
+    //         username: '',
+    //         email: '',
+    //         password: '',
+    //         role: '',
+    //     }
+    // }; 
 
-    login = event => {
-        event.preventDefault();
+    const onSubmit = async data => {
+        
+        setUserRegistration({
+            'username': data.username,
+            'email': data.email,
+            'password': data.password,
+            'role': data.email
+        })
+    }
+
+    // handleChange = event => {    
+    //     this.setState ({
+    //         credentials: {
+    //             ...this.state.credentials,
+    //             [event.target.name]: event.target.value
+    //         }
+    //     });
+    // };
+
+    const history = useHistory();
+
+    useEffect(() => {
         axiosWithAuth()
-            .post('/api/auth/register', this.state.credentials)
+            .post("api/auth/register", userRegistration)
             .then(response => {
-                console.log(response.data)
-                localStorage.setItem('token', response.data.token);
-                localStorage.setItem('email', response.data.created_user.email); 
-                this.props.history.push('/dashboard');
-                this.setState ({ credentials: {
-                    email: '',
-                    password: ''
-                }});
+                console.log("user registration response", response.data);
+                history.push('/dashboard');
             })
-                .catch (error => console.log (error));
-    };
-
+            .catch(error => console.log(error));
+    }, [userRegistration]);
     
+    // login = event => {
+        
+    //     event.preventDefault();
+    //     axiosWithAuth()
+    //         .post('/api/auth/register', this.state.credentials)
+    //         .then(response => {
+    //             console.log(response.data)
+    //             localStorage.setItem('token', response.data.token);
+    //             localStorage.setItem('email', response.data.created_user.email);       
+    //             history.push('/dashboard');
+    //             this.setState ({ credentials: {
+    //                 username: '',
+    //                 email: '',
+    //                 password: '',
+    //                 role: ''
+    //             }});
+    //         })
+    //             .catch (error => console.log (error));
+    // };
 
-    render() {
         
         return (
             
             <Wrapper>
-                <Form onSubmit = {this.logon}>
+                <Form onSubmit = {handleSubmit(onSubmit)}>
                     <Header><h3>Disney Parent Registration </h3></Header>
                     
                     <Input
                         type = 'text'
-                        name = 'userName'
-                        value = {this.state.credentials.userName || ''}
-                        onChange = {this.handleChange}
+                        name = 'username'
                         placeholder = '* name'
+                        ref={register({required: true})}
                         />
+                        {errors.username && 'A username is required.'}
                         <br></br>
 
                     <Input
                         type = 'text'
                         name = 'role'
-                        value = {this.state.credentials.role || ''}
-                        onChange = {this.handleChange}
+                        ref={register({required: true})}
                         placeholder = '* account type'
                         />
-
+                        {errors.role && 'A role is required.'}
                         <br></br>
 
                     <Input
                         type = 'text'
                         name = 'email'
-                        value = {this.state.credentials.email || ''}
-                        onChange = {this.handleChange}
+                        ref={register({required: true})}
                         placeholder = '* email'
                         />
-
+                        {errors.email && 'A email is required.'}
                         <br></br>
 
                     <Input
                         type = 'password'
                         name = 'password'
-                        value = {this.state.credentials.password || ''}
-                        onChange = {this.handleChange}
+                        ref={register({required: true})}
                         placeholder = '* password'
                         />
+                        {errors.password && 'A password is required.'}
                         <br></br>
 
                     <Button 
@@ -107,8 +133,7 @@ class Registration extends React.Component {
                 </Form>
             </Wrapper>
         );
-    }
     
 }
 
-export default withRouter (Registration);
+export default Registration;
