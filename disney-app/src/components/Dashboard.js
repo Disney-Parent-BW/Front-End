@@ -9,6 +9,7 @@ const Dashboard = () => {
     const [userRole] = useState(localStorage.getItem('role'));
     return (
         <>
+        <Navigation/>
         <div className = "dashboard-header">
                 
                 <h2>Welcome to the Disney Parent App, {currentUser}.</h2>

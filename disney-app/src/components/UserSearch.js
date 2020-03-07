@@ -1,5 +1,5 @@
 import React from 'react';
-
+// import Navigation from './Navigation';
 import SearchForm from './SearchForm.js';
 import UserCard from './searched-user/UserCard.js';
 import UserAccount from './searched-user/UserAccount.js';
@@ -17,6 +17,7 @@ const Container = styled.div`
 const UserSearch = () => {
 
     return (<>
+        {/* <Navigation/> */}
         <SearchContextProvider>
             <Container>
                 <SearchForm />

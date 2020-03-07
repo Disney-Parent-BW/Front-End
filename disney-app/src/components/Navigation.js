@@ -3,10 +3,10 @@ import { Link, Route } from 'react-router-dom';
 import styled from "styled-components";
 // import SaltFeed from './SaltFeed';
 // import Logon from '/Logon';
-import List from './List';
+// import List from './List';
 import UserSearch from './UserSearch.js';
-import Dashboard from './Dashboard';
-import PrivateRoute from './PrivateRoute';
+// import Dashboard from './Dashboard';
+// import PrivateRoute from './PrivateRoute';
 
 
 const WrapperDiv = styled.div `
@@ -20,9 +20,9 @@ const WrapperDiv = styled.div `
     padding: 20px;
 `
 
-const Container = styled.div`
+// const Container = styled.div`
 
-`
+// `
 
 const Navigation = () => {
 

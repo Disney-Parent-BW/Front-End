@@ -1,13 +1,20 @@
 import React, { useState, useContext } from "react";
 import axios from 'axios'
 import styled from 'styled-components';
+import { Link,} from 'react-router-dom';
+// import Navigation from './Navigation';
 
 import { SearchContext } from '../contexts/SearchContext.js';
 
 import { Button, Form } from 'semantic-ui-react';
 
 const Wrapper = styled.div`
-
+margin-top: 100px;
+height: 500px;
+   
+`
+const linkWrapper = styled.p`
+    font-size: 3rem;
    
 `
 
@@ -20,7 +27,7 @@ const handleInputChange = event => {
 };
 
 const handleSubmit = () => {
-    axios.post("https://disney-parent-api.herokuapp.com/", { user: input })
+    axios.post("https://disney-parent-api.herokuapp.com/api/", { user: input })
     .then(res => {
         console.log("TCL: SearchForm -> res", res)
         setAccount(res.data.top_ten_user);
@@ -35,6 +42,9 @@ const handleSubmit = () => {
 }
 return (
   <div >
+      <linkWrapper>
+      <Link to ="/dashboard" style={{ textDecoration: 'none', color: 'black' }}>Dashboard</Link>
+      </linkWrapper>
     <Wrapper className ="form-style">
     <Form onSubmit={handleSubmit} size='huge'>
         <Form.Field>
