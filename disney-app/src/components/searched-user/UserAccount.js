@@ -5,7 +5,7 @@ import Account from './Account.js';
 
 import {Grid } from 'semantic-ui-react';
 
-const UserAccounts = () => {
+const UserAccount = () => {
     const { account, user } = useContext(SearchContext);
 
     if(account.length > 0) {
@@ -28,4 +28,4 @@ const UserAccounts = () => {
     }
 }
 
-export default UserAccounts;
+export default UserAccount;
