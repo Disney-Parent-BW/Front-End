@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Card,} from 'semantic-ui-react';
 
-const Comment = props => {
+const Account = props => {
 
     if(props.user.name) {
         return (
@@ -10,7 +10,7 @@ const Comment = props => {
                 <Card.Content>
                     <Card.Header>{props.user.name.toUpperCase()}</Card.Header>
                     <Card.Description>
-                        {props.account.text}
+                        {props.accountType.text}
                     </Card.Description>
                 </Card.Content>
             </Card>
@@ -20,4 +20,4 @@ const Comment = props => {
     }
 }
 
-export default Comment;
+export default Account;

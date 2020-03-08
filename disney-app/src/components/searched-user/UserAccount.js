@@ -5,7 +5,7 @@ import Account from './Account.js';
 
 import {Grid } from 'semantic-ui-react';
 
-const UserComments = () => {
+const UserAccounts = () => {
     const { account, user } = useContext(SearchContext);
 
     if(account.length > 0) {
@@ -23,9 +23,9 @@ const UserComments = () => {
        
     } else {
         return (
-            <div>No comments...</div>
+            <div>No accounts..</div>
         )
     }
 }
 
-export default UserComments;
+export default UserAccounts;

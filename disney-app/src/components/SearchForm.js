@@ -9,14 +9,14 @@ import { SearchContext } from '../contexts/SearchContext.js';
 import { Button, Form } from 'semantic-ui-react';
 
 const Wrapper = styled.div`
-margin-top: 100px;
-height: 500px;
+padding: 20px;
+background: #0e101c;
+margin-top: 50px;
+border-radius: 15px;
+height: 250px;
    
 `
-const linkWrapper = styled.p`
-    font-size: 3rem;
-   
-`
+
 
 export default function SearchForm() {
     const { setAccount, setUser } = useContext(SearchContext);
@@ -42,10 +42,9 @@ const handleSubmit = () => {
 }
 return (
   <div >
-      <linkWrapper>
-      <Link to ="/dashboard" style={{ textDecoration: 'none', color: 'black' }}>Dashboard</Link>
-      </linkWrapper>
+      <Link to ="/dashboard" style={{ textDecoration: 'none', fontWeight: 'bold', fontSize: '2rem', color: 'black' }}>Return to the Dashboard</Link>
     <Wrapper className ="form-style">
+    
     <Form onSubmit={handleSubmit} size='huge'>
         <Form.Field>
             <input
