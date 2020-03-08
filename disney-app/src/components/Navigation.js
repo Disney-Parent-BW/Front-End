@@ -29,7 +29,7 @@ const Navigation = () => {
   return (
     <>
     <WrapperDiv className = "NavWrap">    
-          <Link to ="/dashboard" style={{ textDecoration: 'none', color: 'white' }}>Dashboard</Link>
+          {/* <Link to ="/dashboard" style={{ textDecoration: 'none', color: 'white' }}>Dashboard</Link> */}
           <Link to ="/search" style={{ textDecoration: 'none' , color: 'white' }}>User Search </Link>
           <Link to ="/saved" style={{ textDecoration: 'none' , color: 'white' }}>Saved User </Link>
     </WrapperDiv>

@@ -57,7 +57,7 @@ const Registration = props => {
                 history.push('/dashboard');
             })
             .catch(error => console.log(error));
-    }, [userRegistration]);
+    }, [history, userRegistration]);
     
     // login = event => {
         
